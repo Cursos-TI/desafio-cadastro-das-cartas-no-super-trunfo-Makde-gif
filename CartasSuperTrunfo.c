@@ -7,41 +7,65 @@
 //Teste larissa
 
 int main() {
-    char estado[3];
-    char codigo[4];
-    char nome_da_cidade[20];
-    int populacao = 11895578 ;
-    float area_em_km2 = 1.52111;
-    float PIB = 7146;
-    int numero_de_pontos_turisticos = 10;
+    // Declaração de variáveis
+    char estado1[3], estado2[3], codigo1[4], codigo2[4], nome_da_cidade1[20], nome_da_cidade2[20];
+    int populacao1, populacao2, numero_de_pontos_turisticos1, numero_de_pontos_turisticos2;
+    float area_em_km2_1, area_em_km2_2, PIB1, PIB2;
 
-    printf("Código da carta: ");;
-    scanf("%3s", codigo);
-    printf("Código: %s\n", codigo);
-
+    // Entrada e saída para a primeira cidade
+    printf("\n Carta A01 \n");
+    printf("Código da carta: ");
+    scanf("%3s", codigo1);
     printf("Estado: ");
-    scanf("%2s", estado);
-    printf("Estado: %s\n", estado);
-
+    scanf("%2s", estado1);
     printf("Nome da cidade: ");
-    scanf("%20s", nome_da_cidade);
-    printf("Cidade: %s\n", nome_da_cidade);
-
+    scanf("%20s", nome_da_cidade1);
     printf("População: ");
-    scanf("%d", &populacao);
-    printf("População: %d\n", populacao);
-
+    scanf("%d", &populacao1);
     printf("Área em km²: ");
-    scanf("%f", &area_em_km2);
-    printf("Área: %.2f km²\n", area_em_km2);
-
+    scanf("%f", &area_em_km2_1);
     printf("PIB: ");
-    scanf("%f", &PIB);
-    printf("PIB: %.2f\n", PIB);
-
+    scanf("%f", &PIB1);
     printf("Número de pontos turísticos: ");
-    scanf("%d", &numero_de_pontos_turisticos);
-    printf("Pontos turísticos: %d\n", numero_de_pontos_turisticos);
+    scanf("%d", &numero_de_pontos_turisticos1);
+
+    // Exibir informações da primeira cidade
+    printf("\n Carta A01\n");
+    printf("Código: %s\n", codigo1);
+    printf("Estado: %s\n", estado1);
+    printf("Cidade: %s\n", nome_da_cidade1);
+    printf("População: %d\n", populacao1);
+    printf("Área: %.2f km²\n", area_em_km2_1);
+    printf("PIB: %.2f\n", PIB1);
+    printf("Pontos turísticos: %d\n", numero_de_pontos_turisticos1);
+
+    // Entrada e saída para a segunda cidade
+    printf("\n Carta A02\n");
+    printf("Código da carta: ");
+    scanf("%3s", codigo2);
+    printf("Estado: ");
+    scanf("%2s", estado2);
+    printf("Nome da cidade: ");
+    scanf("%20s", nome_da_cidade2);
+    printf("População: ");
+    scanf("%d", &populacao2);
+    printf("Área em km²: ");
+    scanf("%f", &area_em_km2_2);
+    printf("PIB: ");
+    scanf("%f", &PIB2);
+    printf("Número de pontos turísticos: ");
+    scanf("%d", &numero_de_pontos_turisticos2);
+
+    // Exibir informações da segunda cidade
+    printf("\n Carta A02\n");
+    printf("Código: %s\n", codigo2);
+    printf("Estado: %s\n", estado2);
+    printf("Cidade: %s\n", nome_da_cidade2);
+    printf("População: %d\n", populacao2);
+    printf("Área: %.2f km²\n", area_em_km2_2);
+    printf("PIB: %.2f\n", PIB2);
+    printf("Pontos turísticos: %d\n", numero_de_pontos_turisticos2);
+
 
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
@@ -56,3 +80,4 @@ int main() {
 
     return 0;
 }
+
