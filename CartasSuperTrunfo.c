@@ -10,7 +10,7 @@ int main() {
     // Declaração de variáveis
     char estado1[3], estado2[3], codigo1[4], codigo2[4], nome_da_cidade1[20], nome_da_cidade2[20];
     int populacao1, populacao2, numero_de_pontos_turisticos1, numero_de_pontos_turisticos2;
-    float area_em_km2_1, area_em_km2_2, PIB1, PIB2, densidadepopulacional1, densidadepopulacional2, pibpercapita1, pibpercapita2;
+    float area_em_km2_1, area_em_km2_2, PIB1, PIB2;
 
     // Entrada e saída para a primeira cidade
     printf("\n Carta A01 \n");
@@ -28,10 +28,11 @@ int main() {
     scanf("%f", &PIB1);
     printf("Número de pontos turísticos: ");
     scanf("%d", &numero_de_pontos_turisticos1);
-    printf("Densidade populacional: ");
-    scanf("%f", &densidadepopulacional1);
-    printf("PIB per capita: ");
-    scanf("%f", &pibpercapita1);
+
+    // Cálculos para a primeira cidade
+    float PIB_per_capita1 = PIB1 / populacao1;
+    float densidade_demografica1 = populacao1 / area_em_km2_1;
+
 
     // Exibir informações da primeira cidade
     printf("\n Carta A01\n");
@@ -42,8 +43,10 @@ int main() {
     printf("Área: %.2f km²\n", area_em_km2_1);
     printf("PIB: %.2f\n", PIB1);
     printf("Pontos turísticos: %d\n", numero_de_pontos_turisticos1);
-    printf("Densidade populacional: %.2f\n", densidadepopulacional1);
-    printf("PIB per capita: %.2f\n", pibpercapita1);
+    printf("PIB per capita: %.2f\n", PIB_per_capita1);
+    printf("Densidade demográfica: %.2f habitantes/km²\n", densidade_demografica1);
+
+
 
     // Entrada e saída para a segunda cidade
     printf("\n Carta A02\n");
@@ -61,10 +64,11 @@ int main() {
     scanf("%f", &PIB2);
     printf("Número de pontos turísticos: ");
     scanf("%d", &numero_de_pontos_turisticos2);
-    printf("Densidade populacional: ");
-    scanf("%f", &densidadepopulacional2);
-    printf("PIB per capita: ");
-    scanf("%f", &pibpercapita2);
+
+    // Cálculos para a segunda cidade
+    float PIB_per_capita2 = PIB2 / populacao2;
+    float densidade_demografica2 = populacao2 / area_em_km2_2;
+
 
     // Exibir informações da segunda cidade
     printf("\n Carta A02\n");
@@ -75,9 +79,11 @@ int main() {
     printf("Área: %.2f km²\n", area_em_km2_2);
     printf("PIB: %.2f\n", PIB2);
     printf("Pontos turísticos: %d\n", numero_de_pontos_turisticos2);
-    printf("Densidade populacional: %.2f\n",densidadepopulacional2);
-    printf("PIB per capita: %.2f\n", pibpercapita2);
- 
+    printf("PIB per capita: %.2f\n", PIB_per_capita2);
+    printf("Densidade demográfica: %.2f habitantes/km²\n", densidade_demografica2);
+
+
+
 
 
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
