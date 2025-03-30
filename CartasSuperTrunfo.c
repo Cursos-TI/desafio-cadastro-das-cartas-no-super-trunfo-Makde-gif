@@ -85,17 +85,42 @@ int main() {
     printf("PIB per capita: %.2f\n", PIB_per_capita2);
     printf("Densidade demográfica: %.2f habitantes/km²\n", densidade_demografica2);
 
-    // Exibição e comparações
-    printf("\nComparação de Cartas:\n");
-    printf("População: Carta %d venceu (%d)\n", populacao1 > populacao2 ? 1 : 2, populacao1 > populacao2 ? 1 : 0);
-    printf("Área: Carta %d venceu (%d)\n", area_em_km2_1 > area_em_km2_2 ? 1 : 2, area_em_km2_1 > area_em_km2_2 ? 1 : 0);
-    printf("PIB: Carta %d venceu (%d)\n", PIB1 > PIB2 ? 1 : 2, PIB1 > PIB2 ? 1 : 0);
-    printf("Pontos Turísticos: Carta %d venceu (%d)\n", numero_de_pontos_turisticos1 > numero_de_pontos_turisticos2 ? 1 : 2, numero_de_pontos_turisticos1 > numero_de_pontos_turisticos2 ? 1 : 0);
-    printf("Densidade Populacional: Carta %d venceu (%d)\n", densidade_demografica1 < densidade_demografica2 ? 1 : 2, densidade_demografica1 < densidade_demografica2 ? 1 : 0);
-    printf("PIB per Capita: Carta %d venceu (%d)\n", PIB_per_capita1 > PIB_per_capita2 ? 1 : 2, PIB_per_capita1 > PIB_per_capita2 ? 1 : 0);
-    printf("Super Poder: Carta %d venceu (%d)\n", super_poder1 > super_poder2 ? 1 : 2, super_poder1 > super_poder2 ? 1 : 0);
-
-
+    // Exibição e comparações em if e else
+    if(populacao1 > populacao2){
+        printf("População: A Carta A01 venceu!\n");
+    }else {
+        printf("População: A Carta A02 venceu!\n");
+    }
+    if(area_em_km2_1 > area_em_km2_2){
+        printf("Area em km²: A Carta A01 venceu!\n");
+    }else{
+        printf("Area em km²: A Carta A02 venceu!\n");
+    }
+    if(PIB1 > PIB2){
+        printf("PIB: A Carta A01 venceu!\n");
+    }else{
+        printf("PIB: A Carta A02 Venceu!\n");
+    }
+    if(numero_de_pontos_turisticos1 > numero_de_pontos_turisticos2){
+        printf("Pontos Turisticos: A Carta A01 venceu!\n");
+    }else{
+        printf("Pontos Turisticos: A Carta A02 Venceu!\n");
+    }
+    if(densidade_demografica1 < densidade_demografica2){
+        printf("Densidade Demografica: A Carta A01 venceu\n");
+    }else{
+        printf("Densidade Demografica: A Carta A02 venceu\n");
+    }
+    if(PIB_per_capita1 > PIB_per_capita2){
+        printf("PIB per capita: A Carta A01 venceu!\n");
+    }else{
+        printf("PIB per capita: A Carta A02 Venceu!\n");
+    }
+    if (super_poder1 > super_poder2){
+        printf("Super Poder: A Carta A01 venceu!\n");
+    }else{
+        printf("Super Poder: A Carta A02 venceu!\n");
+    }
 
 
 
