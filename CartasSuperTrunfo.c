@@ -12,6 +12,7 @@ int main() {
     unsigned long int populacao1, populacao2;
     int numero_de_pontos_turisticos1, numero_de_pontos_turisticos2;
     float area_em_km2_1, area_em_km2_2, PIB1, PIB2;
+    int opcao;
 
     // Entrada e saída para a primeira cidade
     printf("\n Carta A01 \n");
@@ -85,43 +86,66 @@ int main() {
     printf("PIB per capita: %.2f\n", PIB_per_capita2);
     printf("Densidade demográfica: %.2f habitantes/km²\n", densidade_demografica2);
 
-    // Exibição e comparações em if e else
-    if(populacao1 > populacao2){
-        printf("População: A Carta A01 venceu!\n");
-    }else {
-        printf("População: A Carta A02 venceu!\n");
-    }
-    if(area_em_km2_1 > area_em_km2_2){
-        printf("Area em km²: A Carta A01 venceu!\n");
-    }else{
-        printf("Area em km²: A Carta A02 venceu!\n");
-    }
-    if(PIB1 > PIB2){
-        printf("PIB: A Carta A01 venceu!\n");
-    }else{
-        printf("PIB: A Carta A02 Venceu!\n");
-    }
-    if(numero_de_pontos_turisticos1 > numero_de_pontos_turisticos2){
-        printf("Pontos Turisticos: A Carta A01 venceu!\n");
-    }else{
-        printf("Pontos Turisticos: A Carta A02 Venceu!\n");
-    }
-    if(densidade_demografica1 < densidade_demografica2){
-        printf("Densidade Demografica: A Carta A01 venceu\n");
-    }else{
-        printf("Densidade Demografica: A Carta A02 venceu\n");
-    }
-    if(PIB_per_capita1 > PIB_per_capita2){
-        printf("PIB per capita: A Carta A01 venceu!\n");
-    }else{
-        printf("PIB per capita: A Carta A02 Venceu!\n");
-    }
-    if (super_poder1 > super_poder2){
-        printf("Super Poder: A Carta A01 venceu!\n");
-    }else{
-        printf("Super Poder: A Carta A02 venceu!\n");
-    }
+    // Menu interativo usando switch
+    printf("\nEscolha o atributo para comparar:\n");
+    printf("1. População\n");
+    printf("2. Área em km²\n");
+    printf("3. PIB\n");
+    printf("4. Número de pontos turísticos\n");
+    scanf("%d", &opcao);
 
+    switch (opcao) {
+        case 1:
+            printf("\nAtributo usado: População\n");
+            printf("Carta A01 (%s): %lu habitantes\n", nome_da_cidade1, populacao1);
+            printf("Carta A02 (%s): %lu habitantes\n", nome_da_cidade2, populacao2);
+            if (populacao1 > populacao2) {
+                printf("Resultado: A Carta A01 venceu!\n");
+            } else if (populacao1 < populacao2) {
+                printf("Resultado: A Carta A02 venceu!\n");
+            } else {
+                printf("Resultado: EMPATE!\n");
+            }
+            break;
+        case 2:
+            printf("\nAtributo usado: Área em km²\n");
+            printf("Carta A01 (%s): %.2f km²\n", nome_da_cidade1, area_em_km2_1);
+            printf("Carta A02 (%s): %.2f km²\n", nome_da_cidade2, area_em_km2_2);
+            if (area_em_km2_1 > area_em_km2_2) {
+                printf("Resultado: A Carta A01 venceu!\n");
+            } else if (area_em_km2_1 < area_em_km2_2) {
+                printf("Resultado: A Carta A02 venceu!\n");
+            } else {
+                printf("Resultado: EMPATE!\n");
+            }
+            break;
+        case 3:
+            printf("\nAtributo usado: PIB\n");
+            printf("Carta A01 (%s): R$ %.2f\n", nome_da_cidade1, PIB1);
+            printf("Carta A02 (%s): R$ %.2f\n", nome_da_cidade2, PIB2);
+            if (PIB1 > PIB2) {
+                printf("Resultado: A Carta A01 venceu!\n");
+            } else if (PIB1 < PIB2) {
+                printf("Resultado: A Carta A02 venceu!\n");
+            } else {
+                printf("Resultado: EMPATE!\n");
+            }
+            break;
+        case 4:
+            printf("\nAtributo usado: Número de pontos turísticos\n");
+            printf("Carta A01 (%s): %d pontos turísticos\n", nome_da_cidade1, numero_de_pontos_turisticos1);
+            printf("Carta A02 (%s): %d pontos turísticos\n", nome_da_cidade2, numero_de_pontos_turisticos2);
+            if (numero_de_pontos_turisticos1 > numero_de_pontos_turisticos2) {
+                printf("Resultado: A Carta A01 venceu!\n");
+            } else if (numero_de_pontos_turisticos1 < numero_de_pontos_turisticos2) {
+                printf("Resultado: A Carta A02 venceu!\n");
+            } else {
+                printf("Resultado: EMPATE!\n");
+            }
+            break;
+        default:
+            printf("Opção inválida!\n");
+    }
 
 
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
